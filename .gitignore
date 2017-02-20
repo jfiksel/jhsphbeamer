@@ -1,0 +1,8 @@
+# Ignore these extensions #
+*.aux
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.log
