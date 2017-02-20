@@ -1,0 +1,96 @@
+% JHSPH Theme
+% Made by Jacob Fiksel, February 2017
+% Taken from The University of Tennessee, Knoxville theme
+% Made by Enda Hargaden
+% Theme mimicks the PPT format provided by JHSPH
+
+\mode<presentation>
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{textcomp}
+
+
+% Use Helvetica, as requested
+\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+\renewcommand\familydefault{\sfdefault}
+
+% Turn off those navigation symbols nobody uses
+\setbeamertemplate{navigation symbols}{}
+
+
+% The new \br command creates a linebreak
+\newcommand{\br}{\vspace{\baselineskip}}
+
+%% JHSPHBlue and JHSPHBlack 
+\definecolor{JHSPHBlue}{RGB}{0, 45, 114}
+\definecolor{JHSPHBlack}{RGB}{0, 0, 0}
+
+\setbeamercolor{frametitle}{fg = JHSPHBlue}
+\setbeamercolor{title}{fg = JHSPHBlue}
+
+
+% In case you choose to display the Table of Contents, or the Outline slide.
+\setbeamercolor{section in toc}{fg = JHSPHBlack}
+\setbeamercolor{section in toc shaded}{fg = JHSPHBlue}
+
+% The colour of all the items, subitems and and subsubitems
+\setbeamercolor{item}{fg = JHSPHBlack}
+\setbeamercolor{subitem}{fg = JHSPHBlue}
+\setbeamercolor{subsubitem}{fg = JHSPHBlack}
+\setbeamercolor{normal text}{fg = JHSPHBlack}
+
+
+\setbeamercolor{postit}{fg=white,bg=JHSPHBlue}
+\setbeamercolor{postthat}{fg=JHSPHBlue,bg=JHSPHBlue}
+\useinnertheme{rounded}
+
+
+\setbeamerfont{block title}{size={}}
+
+
+\setbeamertemplate{title page}{
+\begin{center}\vspace{0.5\baselineskip}
+{\Large \textcolor{JHSPHBlue}{\inserttitle}}
+
+
+\insertsubtitle
+
+\br
+
+{\large \insertauthor}
+
+\br
+{\small Department of Biostatistics}
+
+\br
+\insertdate
+
+\br
+
+\includegraphics[width=1.8in,keepaspectratio]{jhsph_logo}
+
+\end{center}
+}
+
+
+
+\setbeamertemplate{itemize items}[circle]
+
+\defbeamertemplate*{footline}{}
+{
+%\ifnum \insertpagenumber > 1
+%\vspace{-0.9cm}\begin{beamercolorbox}[sep=0em,ht=0.4cm,dp=0.3cm,wd=\paperwidth,leftskip=0cm,center]{postit}\parbox{0.333333\paperwidth}{{\fontsize{4}{4} \selectfont \textcopyright2017,  Johns Hopkins University. All rights reserved } }\parbox{0.333333\paperwidth}{ \hspace{0.01cm} }\parbox{0.31\paperwidth}{\hfill\includegraphics[width=.5cm]{jhsph_shield}}\parbox{0.034\paperwidth}{ }\end{beamercolorbox}
+
+\ifnum \insertpagenumber > 1
+\vspace{-0.9cm}\begin{beamercolorbox}[sep=0em,ht=0.4cm,dp=0.3cm,wd=\paperwidth,leftskip=0cm,center]{postit}\parbox[]{0.333333\paperwidth}{\centering \fontsize{4}{4} \selectfont \textcopyright \the\year,  Johns Hopkins University. All rights reserved } \parbox{0.333333\paperwidth}{ \hspace{0.01cm} }\parbox{0.31\paperwidth}{\hfill \includegraphics[width=.5cm]{jhsph_shield}}\end{beamercolorbox}
+\else
+\vspace{-0.9cm}\begin{beamercolorbox}[sep=0em,ht=0.4cm,dp=0.3cm,wd=\paperwidth,leftskip=0cm,center]{postthat}\parbox{0.333333\paperwidth}{\hfill}\parbox{0.333333\paperwidth}{ \hspace{0.01cm} }\parbox{0.31\paperwidth}{\hfill}\parbox{0.034\paperwidth}{ }\end{beamercolorbox}
+
+\fi
+}
+\addtocounter{framenumber}{-1}
+
+
+\mode
+<all>
